@@ -2,10 +2,7 @@
 @model RazorFirstApp.Pages.forms.BurgersModel
 @{
 }
-<!--<a class="nav-link text-dark" asp-area="" asp-page="/forms/CustomBurgers">Make your Own</a>
-<a class="nav-link text-dark" asp-area="" asp-page="/Checkout/Thankyou">Check Out</a>
-<a class="nav-link text-dark" asp-area="" asp-page="/checkout/Thankyou">Thank You</a>
--->
+
 <div class="text-center">
     <div class="main-text">
         <h1 class="display-4 text-capitalize text-black">Our great selection of Burgers</h1>
@@ -16,28 +13,40 @@
     <div class="container">
         <div class="row">
             <div class="col-12 mb-5 mt-5">
+                 <section onmouseover="ingredientsHover()" onmouseout="ingredientsNormal()"> </section>
                 <div class="w-100 row makeyourownDiv">
                     <div class="col-4">
-                        <img src="~/Images/FastDeliveryBurger.png" class="w-100"/>
+                        <img src="~/Images/LogoBurger.png" class="w-10"/>
                     </div>
                     <div class="col-8 align-items-center">
-                        <div class="align-middle makeyourownText">
+                        <div class="align-middle makeyourownText ">
                             <h3 style="text-align:left;">Create your Burger</h3>
                             <p style="text-align:left;">Add your own toppings with our maker</p>
-                            <a class="btn btn-primary" style="float:left;" asp-area="" asp-page="~/forms/CustomBurgers">Try Now</a>   
+                             <a class="btn btn-primary mt-1" style="float:left;" asp-area="" asp-page="/forms/CustomBurgers">Try Now</a>
                         </div>
                     </div>
                 </div>
             </div>
-           
-                @foreach(var Burger in Model.FakeDB)
+            @foreach(var Burgers in Model.fakeDB)
                 {
-                var ImagePath = "~/Images" + (Burger.ImageTitle + ".png");
+               
+                var ImagePath = "~/Images/" + (Burgers.ImageTitle + ".jpg");
                 <div class="col-4 mb-5">
-                <img src="@ImagePath" class="w-100" asp-append-version="true" />
-                <a class="btn btn-primary mt-1" asp-area="" asp-page="Checkout/checkout" asp-route-ImageTitle="@Burger.ImageTitle" asp-route-BurgerPrice="@Burger.BurgerPrice" >Get this Burger</a>
+                <img src="@ImagePath" class="w-10" asp-append-version="true" />
+                <a class="btn btn-primary mt-1" asp-area=""  asp-page="/Checkout/Checkout" asp-route-ImageTitle="@Burgers.ImageTitle" asp-route-BurgerPrice="@Burgers.FinalPrice" >Get this Burger</a>
                 </div>
-                } 
+                }
+                
         </div>
     </div>
+    <script >
+function DivHover() {
+    document.getElementById("makeyourownDiv").style.fontSize="300%"
+    }
+
+function DivNormal() {
+    document.getElementById("makeyourownDiv").style.fontSize="100%"
+}
+</script>
+
 </div>

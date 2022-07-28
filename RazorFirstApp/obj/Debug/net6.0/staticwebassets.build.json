@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "a5Z08lvTJI4KHc1XDGQVlZUjrInIavXHKKeQApIttIE=",
+  "Hash": "91aGRTrXME93c3dK+QhrcqtjK77qwEZYHi2l/B+5sfU=",
   "Source": "RazorFirstApp",
   "BasePath": "_content/RazorFirstApp",
   "Mode": "Default",
@@ -117,23 +117,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\ChickenBurger.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\abhyudaya\\source\\repos\\RazorFirstApp\\RazorFirstApp\\wwwroot\\Images\\FastDeliveryBurger.png",
-      "SourceId": "RazorFirstApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\abhyudaya\\source\\repos\\RazorFirstApp\\RazorFirstApp\\wwwroot\\",
-      "BasePath": "_content/RazorFirstApp",
-      "RelativePath": "Images/FastDeliveryBurger.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\FastDeliveryBurger.png"
     },
     {
       "Identity": "C:\\Users\\abhyudaya\\source\\repos\\RazorFirstApp\\RazorFirstApp\\wwwroot\\Images\\HamBurger.jpg",

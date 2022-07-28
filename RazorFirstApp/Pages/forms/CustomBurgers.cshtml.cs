@@ -6,6 +6,7 @@ namespace RazorFirstApp.Pages.forms
 {
     public class CustomBurgersModel : PageModel
     {
+       
         [BindProperty]
         public BurgersModels Burgers { get; set; }
         public float BurgerPrice { get; set; }
@@ -15,13 +16,13 @@ namespace RazorFirstApp.Pages.forms
         public IActionResult OnPost()
         {
             BurgerPrice = Burgers.BasePrice;
-            if (Burgers.Tomato) BurgerPrice = +1;
-            if (Burgers.Lettuce) BurgerPrice = +1;
-            if (Burgers.Cheese) BurgerPrice = +1;
-            if (Burgers.Onion) BurgerPrice = +1;
-            if (Burgers.Jalepano) BurgerPrice = +1;
-            if (Burgers.corns) BurgerPrice = +1;
-            return RedirectToPage("/Checkout/checkout", new {Burgers.BurgersName,BurgerPrice});
+            if (Burgers.Tomato) BurgerPrice += 1;
+            if (Burgers.Lettuce) BurgerPrice += 1;
+            if (Burgers.Cheese) BurgerPrice += 1;
+            if (Burgers.Onion) BurgerPrice += 1;
+            if (Burgers.Jalepano) BurgerPrice += 1;
+            if (Burgers.Ham) BurgerPrice += 1;
+            return RedirectToPage("/Checkout/Checkout", new {Burgers.BurgerName,BurgerPrice});
 
         }
     }

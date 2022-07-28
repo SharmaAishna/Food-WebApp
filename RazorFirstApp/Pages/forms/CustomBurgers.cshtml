@@ -2,27 +2,26 @@
 @model RazorFirstApp.Pages.forms.CustomBurgersModel
 @{
 }
-<!--<a class="nav-link text-dark" asp-area="" asp-page="/Checkout/checkout">Checkout</a>
-<a class="nav-link text-dark" asp-area="" asp-page="/Checkout/Thankyou">Thank You</a>
--->
 <div class="text-center container">
     <h1> Create your own Pizza</h1>
-    <form method="post" class="mx-auto mt-5 mb-5 pt-5 px-5 rounded-5 alert-light col-4">
-        <input type="text" asp-for="Burgers.BurgersName" placeholder="Give your Order a Name" />
+    <form method="post" class=" mx-auto mt-5 mb-5 pt-5 px-5 pb-5 rounded-5 bg-light col-4">
+        <input type="text" asp-for="Burgers.BurgerName" placeholder="Give your Order a Name" />
+        <br/><br/>
+        
+        <input type="checkbox" asp-for="Burgers.Tomato" placeholder="Tomato"/>Tomato
+         <br/>
+        <input type="checkbox" asp-for="Burgers.Lettuce" placeholder="Lettuce"/>Lettuce
+         <br/>
+        <input type="checkbox" asp-for="Burgers.Cheese" placeholder="Cheese"/>Cheese
+         <br/>
+        <input type="checkbox" asp-for="Burgers.Onion" placeholder="Onions"/>Onions
+         <br/>
+        <input type="checkbox" asp-for="Burgers.Jalepano" placeholder="Jalepano"/>Jalepano
+         <br/>
+        <input type="checkbox" asp-for="Burgers.Ham" placeholder="Ham"/>Ham
+         <br/>
+         <hr/>
+         <button class="btn btn-primary mt-1" type="submit">Order</button>
         <br/>
-        <button class="btn btn-primary mt-1" type="submit">Order</button>
-        <br/>
-        <input type="checkbox" asp-for="Burgers.Tomato" placeholder="Tomato" />
-         <br/>
-        <input type="checkbox" asp-for="Burgers.Lettuce" placeholder="Lettuce" />
-         <br/>
-        <input type="checkbox" asp-for="Burgers.Cheese" placeholder="Cheese" />
-         <br/>
-        <input type="checkbox" asp-for="Burgers.Onion" placeholder="Onions" />
-         <br/>
-        <input type="checkbox" asp-for="Burgers.Jalepano" placeholder="Jalepano" />
-         <br/>
-        <input type="checkbox" asp-for="Burgers.corns" placeholder="Corns" />
-         <br/>
         </form>
 </div>
