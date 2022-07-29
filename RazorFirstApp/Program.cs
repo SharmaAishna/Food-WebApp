@@ -3,7 +3,8 @@ using RazorFirstApp.Data;
     var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<ApplicationDBContext>(options => {
+builder.Services.AddDbContext<ApplicationDBContext>(options => 
+ {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 builder.Services.AddRazorPages();

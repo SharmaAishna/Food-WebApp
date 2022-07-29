@@ -1,0 +1,31 @@
+﻿@page
+@model RazorFirstApp.Pages.forms.ManageOrdersModel
+@{
+}
+<h3>Manage Orders</h3>
+<hr/>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Pizza Name
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var order in Model.burgerOrders)
+        {
+        <tr>
+            <td>@order.Id</td>
+            <td>@order.BurgerName</td>
+            <td>@order.BasePrice</td>
+        </tr>
+        }
+    </tbody>
+</table>
