@@ -15,12 +15,12 @@
             <div class="col-12 mb-5 mt-5">
                  <div class="w-100 row mademyDiv">
                     <div class="col-4">
-                        <img src="~/Images/LogoBurger.png" class="w-10"/>
+                        <img src="~/Images/LogoBurger.png" class="w-100"/>
                     </div>
                     <div class="col-8 align-items-center">
                         <div class="align-middle mademyText ">
-                            <h3 style="text-align:left;">Create your Burger</h3>
-                            <p style="text-align:left;">Add your own toppings with our maker</p>
+                            <h3 style="text-align:center;">Create your Burger</h3>
+                            <p style="text-align:center;">Add your own toppings with our maker</p>
                              <a class="btn btn-primary mt-1" style="float:left;" asp-area="" asp-page="/forms/CustomBurgers">Try Now</a>
                         </div>
                     </div>
@@ -30,12 +30,12 @@
                 {
                
                 var ImagePath = "~/Images/" + (Burgers.ImageTitle + ".jpg");
-                <div class="col-4 mb-5">
-                    <div class="mademyDiv MyImages">
+                <div class="col-4 mb-5 mademyDiv MyImages">
+                    
                    <a class="" asp-area=""  asp-page="/Checkout/Checkout" asp-route-ImageTitle="@Burgers.ImageTitle" asp-route-BurgerPrice="@Burgers.FinalPrice" >
-                   <img src="@ImagePath" class="w-10" asp-append-version="true" /></a>
-                   <h4 class="mademyText">@Burgers.BurgerName</h4>
-                    </div>
+                   <img src="@ImagePath" class="w-100" asp-append-version="true" /></a>
+                 <h5 class=" mademyText">@Burgers.BurgerName</h5>
+                   
                 </div>
                 }
                 

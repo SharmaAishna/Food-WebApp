@@ -5,11 +5,10 @@
 <h1>Your Order!</h1>
 @{
     var ImagePath = "~/Images/" + (@Model.ImageTitle + ".jpg");
-    //var imagePath = "~/Images/" + (@Model.ImageTitle + ".jpg");
-}
+ }
 <div class="align-content-center">
     <div class="col-3 mx-auto mb-5">
-        <img src="@ImagePath" class="w-10" asp-append-version="true"/>
+        <img src="@ImagePath" class="w-100" asp-append-version="true"/>
         <p>Your order @Model.BurgerName is ready</p>
         <p>Total price for your order is :€ @Model.BurgerPrice</p>
         <br/>
