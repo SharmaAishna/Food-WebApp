@@ -5,3 +5,4 @@ Using Razor Pages in ASP.NET for faster access to User Interface.
 For Migration using Nu-Get Packet Manager for connection with SQL Server.
 Generating the price of Item as per selection by User.
 Saving sales in Database.
+This website is Responsive Web Application.
