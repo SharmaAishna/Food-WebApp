@@ -37,7 +37,7 @@ namespace RazorFirstApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BurgerOrder");
+                    b.ToTable("BurgerOrder", (string)null);
                 });
 #pragma warning restore 612, 618
         }
