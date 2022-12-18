@@ -3,8 +3,8 @@
     public class BurgersModels
     {
 
-        public string? ImageTitle { get; set; }
-        public string? BurgerName { get; set; }
+        public string ImageTitle { get; set; }
+        public string BurgerName { get; set; }
         public float BasePrice { get; set; } = 2;
         public float FinalPrice { get; set; }
         public bool Tomato { get; set; }

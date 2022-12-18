@@ -16,10 +16,10 @@ namespace RazorFirstApp.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.9")
+                .HasAnnotation("ProductVersion", "7.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("RazorFirstApp.Models.BurgerOrder", b =>
                 {
@@ -27,7 +27,7 @@ namespace RazorFirstApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<float>("BasePrice")
                         .HasColumnType("real");
@@ -37,7 +37,7 @@ namespace RazorFirstApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("BurgerOrder", (string)null);
+                    b.ToTable("BurgerOrder");
                 });
 #pragma warning restore 612, 618
         }
